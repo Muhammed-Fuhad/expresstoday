@@ -422,3 +422,19 @@ section,
 .section-title {
   font-size: 30px;
 }
+
+.podcast-section {
+  margin-top: 25px;
+}
+
+iframe{
+  align-items: center;
+  margin: auto;
+  display: block;
+}
+
+@media (max-width:719px) {
+  .hero__image{
+    display: none;
+  }
+}
