@@ -282,11 +282,12 @@ section,
     font-family: "poppins",sans-serif;
   }
 
-  .main-article__figure figcaption {
+  figcaption {
     margin: 1rem 0;
     font-size: var(--fs-300);
     opacity: .9;
-    color: var(--clr-primary-400);
+    color: rgb(22, 22, 22);
+    align-items: center;
   }
   .main-article__figure img {
     border-radius: 0.5%;
