@@ -6,7 +6,7 @@ layout: 'base.njk'
 <section class="hero">
   <div class="container flow">
     <div class="hero__content flow">
-      <h1 class="section-title">WELCOME TO EXPRESS TODAY !</h1>
+      <h2 class="section-title" title="Welcome To Express Today">WELCOME TO EXPRESS TODAY !</h2>
       <p>We Are The Express Today Team. We Make Tech And Interview Podcasts With Muhammed Fuhad.</p>
       <p>Below are some of my favourite articles, or you can go to the blog page to see my most recent posts.</p>
       <div class="flex-group">
@@ -19,9 +19,10 @@ layout: 'base.njk'
   </div>
 </section>
 
-<h2 class="section-title text-center ">PODCASTS</h2>
+<h2 class="section-title text-center " title="Podcasts">PODCASTS</h2>
 <div class="podcast-section">
   <iframe style="border-radius:12px"
+  title="Podcast Trailer"
     src="https://open.spotify.com/embed/show/1ADSStXZV8y2popr6FTuqZ?utm_source=generator" width="75%%" height="232"
     frameBorder="0" allowfullscreen=""
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -29,7 +30,7 @@ layout: 'base.njk'
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center ">FEATURED ARTICLES</h2>
+    <h2 class="section-title text-center " title="Featured Articles" >FEATURED ARTICLES</h2>
     <p class="text-center">Here You Can Find Featured Articles.</p>
     <ul role="list" class="articles__list flow">
       {%- for post in collections.featured | reverse -%}
