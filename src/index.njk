@@ -21,8 +21,7 @@ layout: 'base.njk'
 
 <h2 class="section-title text-center " title="Podcasts">PODCASTS</h2>
 <div class="podcast-section">
-  <iframe style="border-radius:12px"
-  title="Podcast Trailer"
+  <iframe style="border-radius:12px" title="Podcast Trailer"
     src="https://open.spotify.com/embed/show/1ADSStXZV8y2popr6FTuqZ?utm_source=generator" width="75%%" height="232"
     frameBorder="0" allowfullscreen=""
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -30,7 +29,7 @@ layout: 'base.njk'
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center " title="Featured Articles" >FEATURED ARTICLES</h2>
+    <h2 class="section-title text-center " title="Featured Articles">FEATURED ARTICLES</h2>
     <p class="text-center">Here You Can Find Featured Articles.</p>
     <ul role="list" class="articles__list flow">
       {%- for post in collections.featured | reverse -%}
@@ -39,3 +38,9 @@ layout: 'base.njk'
     </ul>
   </div>
 </section>
+
+<h2 class="section-title text-center " title="Podcasts">SIGN IN</h2>
+<p class="text-center">You Can Contact Us With Just Clicking On The Sign In Button Below</p>
+<div class="center">
+    <button class="btn-signin"><a class="a-signin" href="./_includes/signin/index.html">SIGN IN</a></button>
+</div>

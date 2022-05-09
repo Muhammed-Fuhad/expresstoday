@@ -422,10 +422,12 @@ section,
 
 .section-title {
   font-size: 30px;
+  margin-top: 30px;
 }
 
 .podcast-section {
   margin-top: 25px;
+  height: 260px;
 }
 
 iframe{
@@ -438,4 +440,42 @@ iframe{
   .hero__image{
     display: none;
   }
+}
+
+.site-footer a{
+  text-decoration: none;
+  color: var(--clr-primary-200);
+}
+
+.btn-signin{
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.75em 5.75em;
+  border-radius: 0.25em;
+  align-self: start;
+  justify-self: start;
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-700);
+  border: 2px solid var(--clr-primary-400);
+  margin-top: 70px;
+}
+
+.btn-signin:focus {
+  outline: 0.125em solid var(--clr-primary-400);
+  outline-offset: 0.25em;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.a-signin{
+  text-decoration: none;
+  color: white;
 }
