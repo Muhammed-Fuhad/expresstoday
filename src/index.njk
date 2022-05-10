@@ -83,26 +83,26 @@ layout: 'base.njk'
       <span class="circle one"></span>
       <span class="circle two"></span>
 
-      <form action="index.html" autocomplete="off">
+      <form action="" id="submit-form"  autocomplete="off">
         <h3 class="title">Contact us</h3>
         <div class="input-container">
-          <input type="text" name="name" class="input" />
-          <label for="">Username</label>
+          <input type="text" name="name" id="fname" class="input" />
+          <label for="fname">Username</label>
           <span>Username</span>
         </div>
         <div class="input-container">
-          <input type="email" name="email" class="input" />
-          <label for="">Email</label>
+          <input type="email" name="email" id="email" class="input" />
+          <label for="email">Email</label>
           <span>Email</span>
         </div>
         <div class="input-container">
-          <input type="tel" name="phone" class="input" />
-          <label for="">Phone</label>
+          <input type="tel" name="phone" id="phone-number" class="input" />
+          <label for="phone-number">Phone</label>
           <span>Phone</span>
         </div>
         <div class="input-container textarea">
-          <textarea name="message" class="input"></textarea>
-          <label for="">Message</label>
+          <textarea name="message" id="messege" class="input"></textarea>
+          <label for="messege">Message</label>
           <span>Message</span>
         </div>
         <input type="submit" value="Send" class="btn-contact" />
@@ -110,6 +110,26 @@ layout: 'base.njk'
     </div>
   </div>
 </div>
+
+<script>
+  $("#submit-form").submit((e)=>{
+      e.preventDefault()
+      $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbzxOY_F1a2WbnTmmY044ayZD56PoMIEAtrfMojweyLNWGjMKvbpPUUbgc44lFLjFWIF/exec",
+          data:$("#submit-form").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Form submitted successfully")
+              window.location.reload()
+              window.location.href="https://expresstoday.info"
+          },
+          error:function (err){
+              alert("Something Error")
+
+          }
+      })
+  })
+</script>
 
 <script src="app.js"></script>
 </body>
