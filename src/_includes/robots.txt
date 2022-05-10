@@ -79,3 +79,9 @@ Disallow: /admin
 allow: expresstoday.info
 allow: /blog
 allow: /privacy_policy/privacy_policy.html
+User-agent: *
+Allow: /
+Sitemap: https://expresstoday.info/site-map
+User-agent: *
+allow /
+Sitemap: https://expresstoday.info
