@@ -777,6 +777,10 @@ textarea.input {
     padding: 1.5rem;
   }
 
+  .form{
+    box-shadow: 0 0 0px 0px #fff;
+  }
+
   .container-contact {
     background-color: #fff;
   }
