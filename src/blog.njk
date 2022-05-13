@@ -4,7 +4,7 @@ layout: "base.njk"
 ---
 
 
-  <div class="section container">
+  <div class="section container" itemscope itemtype="https://schema.org/articles">
     <h1 class="section-title" title="Recent Articles">RECENT ARTICLES</h1>
 
     <ul role="list" class="articles__list flow">
@@ -18,8 +18,8 @@ layout: "base.njk"
     <article class="snippet">
       <img src="/assets/blog/carbon-2021-06-11t092807.024.png" alt="a man on his computer" class="snippet__image">
       <h3 class="snippet__title"><a href="/blog/another-article/">Another article!!</a></h3>
-      <p class="snippet__meta">by <span>Express Today</span> on <span>Jun 15, 2021</span></p>
-      <p class="snippet__body">This is a new article that I&#39;ll be posting</p>
+      <p class="snippet__meta">by <span itemprop="author">Express Today</span> on <span>Jun 15, 2021</span></p>
+      <p class="snippet__body" itemprop="excert">This is a new article that I&#39;ll be posting</p>
       <a href="/blog/another-article/" class="btn btn--primary">CONTINUE READING</a>
     </article>
   </li>#}
