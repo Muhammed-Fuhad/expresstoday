@@ -20,7 +20,6 @@
         href="https://yt3.ggpht.com/WTpLoqTF7-q_MqGCcL6z2fBzYbIOlyYS63i-5oxPIEfdC3hdXiNudJLRxZCCjRdMfyLJT-PG=s88-c-k-c0x00ffffff-no-rj"
         type="image/x-icon">
     <link rel="stylesheet" href="/style.css">
-    <link rel="manifest" href="manifest.json">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYT8PKRDFE"></script>
     <script>
@@ -45,11 +44,21 @@
 </head>
 
 <body>
-    {% include 'header.njk' %}
-    <main>
-        {{ content | safe }}
-    </main>
+    <div id="loading">
+        <img id="loading-image" src="loading.gif" alt="loading">
+    </div>
 
+        {% include 'header.njk' %}
+        <main>
+            {{ content | safe }}
+        </main>
+        {% include 'footer.njk' %}
+
+    <script>
+        $(window).on('load', function () {
+            $('#loading').hide();
+        })
+    </script>
 
     <script>
         if (window.netlifyIdentity) {
@@ -62,19 +71,6 @@
             });
         }
     </script>
-
-    <script>
-        window.onload = () => {
-            'use strict';
-
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker
-                    .register('./sw.js');
-            }
-        }
-    </script>
-
-        {% include 'footer.njk' %}
 </body>
 
 </html>

@@ -827,3 +827,23 @@ textarea.input {
     padding: 0.45rem 1.2rem;
   }
 }
+
+#loading {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.2s linear;
+  width: 100%;
+  z-index: 9999;
+  opacity: 1;
+  transform: opacity 1s linear;
+  background-color: #fff;
+}
+
+#loading-image {
+  z-index: 100;
+}
