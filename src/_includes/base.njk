@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 
-<head prefix="og: http://ogp.me/ns#" >
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,6 +22,7 @@
         href="https://yt3.ggpht.com/WTpLoqTF7-q_MqGCcL6z2fBzYbIOlyYS63i-5oxPIEfdC3hdXiNudJLRxZCCjRdMfyLJT-PG=s88-c-k-c0x00ffffff-no-rj"
         type="image/x-icon" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="manifest" href="manifest.json">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYT8PKRDFE"></script>
     <script>
@@ -47,14 +48,16 @@
 
 <body>
     <div id="loading">
-        <img id="loading-image" src="https://cdn.dribbble.com/users/784258/screenshots/3119074/media/01f2f8d3365e9417c69423f922f366b6.gif" alt="loading">
+        <img id="loading-image"
+            src="https://cdn.dribbble.com/users/784258/screenshots/3119074/media/01f2f8d3365e9417c69423f922f366b6.gif"
+            alt="loading">
     </div>
 
-        {% include 'header.njk' %}
-        <main>
-            {{ content | safe }}
-        </main>
-        {% include 'footer.njk' %}
+    {% include 'header.njk' %}
+    <main>
+        {{ content | safe }}
+    </main>
+    {% include 'footer.njk' %}
 
     <script>
         $(window).on('load', function () {
@@ -72,6 +75,26 @@
                 }
             });
         }
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                    console.log('Service worker successfully registered on scope', registration.scope);
+                }).catch(function (error) {
+                    console.log('Service worker failed to register');
+                });
+            });
+        }
+
+        self.addEventListener('install', function (event) {
+            console.log('Installed sw.js', event);
+        });
+
+        self.addEventListener('activate', function (event) {
+            console.log('Activated sw.js', event);
+        });
     </script>
 
 </body>
