@@ -2,7 +2,10 @@
 node_modules
 
 # build artefacts
-public
+admin
+assets
+blog
+index.html
 css
 
 # secrets and errors
