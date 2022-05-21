@@ -62,7 +62,7 @@
             "url": "/signin.html",
             "icons": [
                 {
-                    "src": "home.png",
+                    "src": "account.png",
                     "type": "image/png",
                     "purpose": "any"
                 }
