@@ -38,7 +38,7 @@
             "url": "/",
             "icons": [
                 {
-                    "src": "home.png",
+                    "src": "https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/re-pict-house-base.png",
                     "type": "image/png",
                     "purpose": "any"
                 }
@@ -50,7 +50,7 @@
             "url": "/blog",
             "icons": [
                 {
-                    "src": "article.png",
+                    "src": "https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/011/089/original/content.png",
                     "type": "image/png",
                     "purpose": "any"
                 }
@@ -62,7 +62,7 @@
             "url": "/signin.html",
             "icons": [
                 {
-                    "src": "home.png",
+                    "src": "https://cdn4.iconfinder.com/data/icons/rounded-black-basic-ui/139/Profile01-RoundedBlack-512.png",
                     "type": "image/png",
                     "purpose": "any"
                 }
