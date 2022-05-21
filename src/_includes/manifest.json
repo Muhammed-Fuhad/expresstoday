@@ -16,19 +16,19 @@
             "src": "logo.png",
             "type": "image/png",
             "sizes": "192x192",
-            "purpose": "maskable any"
+            "purpose": "any"
         },
         {
             "src": "manifest-icon-512.maskable.png",
             "type": "image/png",
             "sizes": "512x512",
-            "purpose": "maskable any"
+            "purpose": "any"
         },
         {
-            "src": "apple-splash-640-1136",
+            "src": "apple-splash-640-1136.jpg",
             "type": "image/jpg",
             "sizes": "640x1136",
-            "purpose": "maskable any"
+            "purpose": "any"
         }
     ],
     "shortcuts": [
