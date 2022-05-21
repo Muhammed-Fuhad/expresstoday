@@ -16,23 +16,21 @@
             "src": "logo.png",
             "type": "image/png",
             "sizes": "192x192",
-            "purpose": "maskable"
-        }
-    ],
-    "shortcuts": [
-        {
-            "name": "Blog",
-            "description": "See Our Blogs"
+            "purpose": "maskable any"
         },
         {
-            "icons": [
-                {
-                    "src": "logo.png",
-                    "type": "image/png",
-                    "sizes": "192x192",
-                    "purpose": "maskable"
-                }
-            ]
+            "src": "icons/manifest-icon-512.maskable.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/apple-splash-640-1136",
+            "type": "image/jpg",
+            "sizes": "640x1136",
+            "purpose": "maskable any"
         }
-    ]
+        
+    ],
+    "shortcuts": []
 }

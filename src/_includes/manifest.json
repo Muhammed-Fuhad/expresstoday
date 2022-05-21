@@ -19,11 +19,54 @@
             "purpose": "maskable any"
         },
         {
-            "src": "expresstoday.png",
+            "src": "manifest-icon-512.maskable.png",
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "maskable any"
+        },
+        {
+            "src": "apple-splash-640-1136",
+            "type": "image/jpg",
+            "sizes": "640x1136",
+            "purpose": "maskable any"
         }
     ],
-    "shortcuts": []
+    "shortcuts": [
+        {
+            "name": "Home",
+            "description": "home page",
+            "url": "/",
+            "icons": [
+                {
+                    "src": "home.png",
+                    "type": "image/png",
+                    "purpose": "any"
+                }
+            ]
+        },
+        {
+            "name": "Blog",
+            "description": "see our latest blog",
+            "url": "/blog",
+            "icons": [
+                {
+                    "src": "article.png",
+                    "type": "image/png",
+                    "purpose": "any"
+                }
+            ]
+        },
+        {
+            "name": "Account",
+            "description": "your profile",
+            "url": "/signin.html",
+            "icons": [
+                {
+                    "src": "home.png",
+                    "type": "image/png",
+                    "purpose": "any"
+                }
+            ]
+        }
+    ]
 }
