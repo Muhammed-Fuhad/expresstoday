@@ -1,5 +1,5 @@
 ---
-title: Express Today Podcast Trailer Launched.
+title: Express Today Podcast Trailer Launched
 description: Our Podcast Trailer Just Launched.In This Trailer We Talk About Our
   Podcast Episodes And Availability.
 author: Express Today
