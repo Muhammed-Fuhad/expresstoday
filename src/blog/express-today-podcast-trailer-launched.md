@@ -18,7 +18,7 @@ We Want To Expand Our Audience And And Also We Want To Give Users More Interesti
 
 **What Is Mainly Focused Contents On Our Podcast ?**
 
-We Mainly Focusing On Comedy Interviews,Tech Updated And More...
+We Mainly Focusing On Comedy Interviews,Tech Updates And More...
 
 **Where You Can Find Our Podcast ?**
 
