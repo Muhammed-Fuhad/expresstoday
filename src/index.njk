@@ -2,6 +2,11 @@
 title: Express Today
 layout: 'base.njk'
 ---
+<div id="loading">
+  <img id="loading-image"
+      src="https://cdn.dribbble.com/users/784258/screenshots/3119074/media/01f2f8d3365e9417c69423f922f366b6.gif"
+      alt="loading">
+</div>
 
 <section class="hero">
   <div class="container flow">
@@ -40,22 +45,8 @@ layout: 'base.njk'
 </section>
 
 <script>
-  $("#submit-form").submit((e)=>{
-      e.preventDefault()
-      $.ajax({
-          url:"https://script.google.com/macros/s/AKfycbzxOY_F1a2WbnTmmY044ayZD56PoMIEAtrfMojweyLNWGjMKvbpPUUbgc44lFLjFWIF/exec",
-          data:$("#submit-form").serialize(),
-          method:"post",
-          success:function (response){
-              alert("Submitted Sucessfully")
-              window.location.reload()
-              window.location.href="https://expresstoday.info"
-          },
-          error:function (err){
-              alert("Something Error")
-
-          }
-      })
+  $(window).on('load', function () {
+      $('#loading').hide();
   })
 </script>
 
@@ -79,4 +70,5 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 </script>
+
 </body>

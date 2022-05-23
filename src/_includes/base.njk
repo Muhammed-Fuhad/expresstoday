@@ -48,23 +48,14 @@
 </head>
 
 <body>
-    <div id="loading">
-        <img id="loading-image"
-            src="https://cdn.dribbble.com/users/784258/screenshots/3119074/media/01f2f8d3365e9417c69423f922f366b6.gif"
-            alt="loading">
-    </div>
-
+    
     {% include 'header.njk' %}
     <main>
         {{ content | safe }}
     </main>
     {% include 'footer.njk' %}
 
-    <script>
-        $(window).on('load', function () {
-            $('#loading').hide();
-        })
-    </script>
+
 
     <script>
         if (window.netlifyIdentity) {
