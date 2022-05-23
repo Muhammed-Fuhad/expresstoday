@@ -6,16 +6,16 @@ layout: 'base.njk'
     <div class="container container--narrow flow" itemscope itemtype="https://schema.org/article">
 
         <figure class="main-article__figure">
-            <img src="{{ image }}" alt="{{ imageAlt }}">
+            <img property="og:image" src="{{ image }}" alt="{{ imageAlt }}">
         </figure>
-        <h1 class="article-title" itemprop="title">
+        <h1 class="article-title" property="og:title" itemprop="title">
             {{ title }}
         </h1>
-        <figcaption itemprop="author">
+        <figcaption property="og:author" itemprop="author">
             By {{ author }}
         </figcaption>
 
-        <div class="sharethis-inline-share-buttons"></div>
+        <div class="sharethis-inline-share-buttons" property="og:description"></div>
         {{ content | safe}}
 
 
