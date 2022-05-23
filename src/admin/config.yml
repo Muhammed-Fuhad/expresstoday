@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: Muhammed-Fuhad/expresstoday
   branch: master
 media_folder: "public/assets/blog"
 public_folder: "/assets/blog"
