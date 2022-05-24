@@ -5,7 +5,7 @@ author: Express Today
 date: 2022-05-23T04:41:42.313Z
 tags:
   - post
-image: /assets/blog/sunday.png
+image: /assets/blog/boringsunday.png
 imagealt: Express Today
 ---
 All Your Sundays Are Not Boring But In Some Sunday We Get Bored. So Here Are The 5 Things To Make Your Boring Sunday More Interesting And Awful. 
