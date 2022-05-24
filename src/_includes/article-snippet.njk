@@ -1,6 +1,6 @@
 <li>
     <article class="snippet">
-        <img src="{{post.data.image}}" alt="image" class="snippet__image" itemprop="image">
+        <img src="{{post.data.image}}" alt="{ post.data.title }" class="snippet__image" itemprop="image">
         <h3 src="{{post.url}}" class="snippet__title"><a href="{{post.url}}" itemprop="url">{{ post.data.title }}</a></h3>
         <p class="snippet__meta">By <span itemprop="author">{{post.data.author}}</span> On <span datetime="{{post.data.date | postDate}}">{{post.data.date | postDate}}</span></p>
         <p class="snippet__body" itemprop="description">{{post.data.description}}</p>
