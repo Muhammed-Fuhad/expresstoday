@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+    <meta property="og:youtube" itemprop="youtube" content="https://www.youtube.com/channel/UCFr9NvjWXy3SpiP6Dafcnig" />
+    <meta property="og:instagram" itemprop="instagram" content="https://www.instagram.com/expresstodaypodcast/?hl=en" />
+    <meta name="keywords"
+        content="blog,express,today,express today,todayexpress,today express,expresstoday,muhammedfuhad,podcasts,blog,articles" />
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta itemprop="author" name="author" content="Blog" />
+    <title>{{ title }}</title>
+    <link rel="icon"
+        href="https://yt3.ggpht.com/WTpLoqTF7-q_MqGCcL6z2fBzYbIOlyYS63i-5oxPIEfdC3hdXiNudJLRxZCCjRdMfyLJT-PG=s88-c-k-c0x00ffffff-no-rj"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="manifest" href="manifest.json">
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=62660afdeb843b00192d14b7&product=inline-reaction-buttons' async='async'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYT8PKRDFE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-LYT8PKRDFE');
+    </script>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1540238782920365"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "d36043bc-b22d-4c45-afb4-2a7b44ae9cf5",
+            });
+        });
+    </script>
+</head>
+
+<body>
+    
+    {% include 'header.njk' %}
+    <main>
+        {{ content | safe }}
+    </main>
+    {% include 'footer.njk' %}
+
+
+
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                    console.log('Service worker successfully registered on scope', registration.scope);
+                }).catch(function (error) {
+                    console.log('Service worker failed to register');
+                });
+            });
+        }
+
+        self.addEventListener('install', function (event) {
+            console.log('Installed sw.js', event);
+        });
+
+        self.addEventListener('activate', function (event) {
+            console.log('Activated sw.js', event);
+        });
+    </script>
+
+</body>
+
+</html>

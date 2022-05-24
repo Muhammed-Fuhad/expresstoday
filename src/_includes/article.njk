@@ -6,7 +6,7 @@ layout: 'base.njk'
     <div class="container container--narrow flow" itemscope itemtype="https://schema.org/article">
 
         <figure class="main-article__figure">
-            <img property="og:image" src="{{ image }}" alt="{{ imageAlt }}">
+            <img itemprop="image" property="og:image" src="{{ image }}" alt="{{ imageAlt }}">
         </figure>
         <h1 class="article-title" property="og:title" itemprop="title">
             {{ title }}
@@ -15,7 +15,7 @@ layout: 'base.njk'
             By {{ author }}
         </figcaption>
 
-        <div class="sharethis-inline-share-buttons" property="og:description"></div>
+        <div class="sharethis-inline-share-buttons" property="og:description" itemprop="description"></div>
         {{ content | safe}}
 
 
