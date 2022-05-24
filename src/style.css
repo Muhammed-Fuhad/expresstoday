@@ -186,7 +186,7 @@ section,
 }
 
 .article-title {
-  font-size: var(--fs-700);
+  font-size: 1.5rem;
   font-family: 'Poppins', sans-serif;
 }
 
