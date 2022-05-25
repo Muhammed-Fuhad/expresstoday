@@ -5,7 +5,7 @@ layout: 'article-base.njk'
 <article class="main-article">
     <div class="container container--narrow flow" itemscope itemtype="https://schema.org/article">
 
-        <figure class="main-article__figure">
+        <figure itemprop="image" property="og:image" class="main-article__figure">
             <img itemprop="image" property="og:image" src="{{ image }}" alt="{{ imageAlt }}">
         </figure>
         <h1 class="article-title" property="og:title" itemprop="title">
