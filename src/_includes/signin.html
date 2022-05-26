@@ -1,94 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon"
-        href="https://yt3.ggpht.com/WTpLoqTF7-q_MqGCcL6z2fBzYbIOlyYS63i-5oxPIEfdC3hdXiNudJLRxZCCjRdMfyLJT-PG=s88-c-k-c0x00ffffff-no-rj"
-        type="image/x-icon" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id"
-        content="717531400558-ab5qtm8h1crg8b9kcon3h0qda0mloc2v.apps.googleusercontent.com">
-</head>
-
-<body>
-    <header class="page-header">
-        <div class="container">
-            <div class="page-header__content">
-                <h1 class="logo">EXPRESS TODAY</h1>
-            </div>
-        </div>
-    </header>
-
-    <h1 class="signin-title">Sign In With Google</h1>
-    <div class="g-signin2" data-theme="dark" data-onsuccess="onSignIn"></div>
-
-    <div class="data">
-        <img id="image" width="100" height="100" />
-        <p id="name"></p>
-        <p id="email"></p>
-        <button type="button" class="btn--signout" onclick="signOut();">Sign Out</button>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="LoginScreen">
+      <button class="login" id="login">Login with Google</button>
     </div>
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <nav class="nav">
-        <a href="/" class="nav__link">
-            <span class="material-symbols-outlined">
-                home
-            </span>
-            <span class="nav__text">Home</span>
-        </a>
-        <a href="/blog" class="nav__link">
-            <span class="material-symbols-outlined">
-                article
-            </span>
-            <span class="nav__text">Blog</span>
-        </a>
-        <a href="/podcast" class="nav__link">
-            <span class="material-symbols-outlined">
-                podcasts
-            </span>
-            <span class="nav__text">Podcast</span>
-        </a>
-        <a href="/signin.html" class="nav__link">
-            <span class="material-symbols-outlined">
-                person
-            </span>
-            <span class="nav__text">Account</span>
-        </a>
-    </nav>
+    <div id="dashboard">
+      <div id="userDetails"></div>
+      <button id="logout">Logout</button>
+    </div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
 
-    <script async defer>
-            function onSignIn(googleUser) {
-                var profile = googleUser.getBasicProfile();
-                $("#name").text(profile.getName());
-                $("#email").text(profile.getEmail());
-                $("#image").attr('src', profile.getImageUrl());
-                $(".data").css("display", "block");
-                $(".g-signin2").css("display", "none");
-                $(".signin-title").css("display", "none");
-            }
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
 
-            function signOut() {
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function () {
-                    alert("You have been signed out successfully");
-                    $(".data").css("display", "none");
-                    $(".g-signin2").css("display", "block");
-                    $(".signin-title").css("display", "block");
-                });
-            }
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+      apiKey: "AIzaSyA0n9zreS-SCkC8-7sR49nrJrFG0cKWbuw",
+      authDomain: "express-today-3f27f.firebaseapp.com",
+      projectId: "express-today-3f27f",
+      storageBucket: "express-today-3f27f.appspot.com",
+      messagingSenderId: "141164597148",
+      appId: "1:141164597148:web:6d97edee452f9814e80259"
+    };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      document.getElementById('dashboard').style.display="none"
+
+      document.getElementById('login').addEventListener('click', GoogleLogin)
+      document.getElementById('logout').addEventListener('click', LogoutUser)
+
+      let provider = new firebase.auth.GoogleAuthProvider()
+
+      function GoogleLogin(){
+        console.log('Login Btn Call')
+        firebase.auth().signInWithPopup(provider).then(res=>{
+          console.log(res.user)
+          document.getElementById('LoginScreen').style.display="none"
+          document.getElementById('dashboard').style.display="block"
+          showUserDetails(res.user)
+        }).catch(e=>{
+          console.log(e)
+        })
+      }
+
+      function showUserDetails(user){
+        document.getElementById('userDetails').innerHTML = `
+          <img src="${user.photoURL}" style="width:10%">
+          <p>Name: ${user.displayName}</p>
+          <p>Email: ${user.email}</p>
+        `
+      }
+
+      function checkAuthState(){
+        firebase.auth().onAuthStateChanged(user=>{
+          if(user){
+            document.getElementById('LoginScreen').style.display="none"
+            document.getElementById('dashboard').style.display="block"
+            showUserDetails(user)
+          }else{
+
+          }
+        })
+      }
+
+      function LogoutUser(){
+        console.log('Logout Btn Call')
+        firebase.auth().signOut().then(()=>{
+          document.getElementById('LoginScreen').style.display="block"
+          document.getElementById('dashboard').style.display="none"
+        }).catch(e=>{
+          console.log(e)
+        })
+      }
+      checkAuthState()
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-        crossorigin="anonymous"></script>
-</body>
-
+  </body>
 </html>

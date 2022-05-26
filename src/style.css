@@ -499,59 +499,7 @@ iframe{
   z-index: 100;
 }
 
-.data {
-  display: none;
-}
 
-.data p{
-  text-align: center;
-  margin-top: 15px;
-}
 
-.data img{
-  border-radius: 5%;
-  margin-top: 25px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.g-signin2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
-}
-
-.signin-title{
-  font-size: 30px;
-  margin-top: 30px;
-  text-align: center;
-  font-family: sans-serif;
-  color: #009578;
-}
-
-.btn--signout{
-  background: var(--clr-primary-400);
-  color: var(--clr-neutral-100);
-  font-weight: var(--fw-700);
-  border: 2px solid var(--clr-primary-400);
-  cursor: pointer;
-  border-radius: 5%;
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  margin-left: -50px;
-  margin-top: 20px;
-}
-
-.profile-title{
-  font-size: 30px;
-  margin-top: 30px;
-  text-align: center;
-  font-family: sans-serif;
-  color: #009578;
-}
 
 
