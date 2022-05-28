@@ -286,7 +286,6 @@ section,
 
 .hero__image {
   width: 100%;
-  max-height: max(31rem, 40vh); 
   object-fit: cover;
   border-radius: 8%;
 }
