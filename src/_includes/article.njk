@@ -24,7 +24,7 @@ layout: 'article-base.njk'
     <div class="container flow">
         <h2 class="section-title text-center " title="Featured Articles">MORE LIKE THIS</h2>
         <ul role="list" class="articles__list flow">
-            {%- for post in collections.post | reverse -%}
+            {%- for post in collections.post -%}
             {% include 'article-snippet.njk'%}
             {%- endfor %}
         </ul>
