@@ -6,9 +6,9 @@ layout: 'article-base.njk'
     <div class="container container--narrow flow" itemscope itemtype="https://schema.org/article">
 
         <figure itemprop="image" property="og:image" class="main-article__figure">
-            <img itemprop="image" property="og:image" src="{{ image }}" alt="{{ imageAlt }}">
+            <img itemprop="image" property="og:image" src="{{ image }}" alt="{{ imageAlt }}" title="{{ title }}">
         </figure>
-        <h1 class="article-title" property="og:title" itemprop="title">
+        <h1 class="article-title" property="og:title" title="{{ title }}" itemprop="title">
             {{ title }}
         </h1>
         <figcaption property="og:author" itemprop="author">
@@ -19,5 +19,14 @@ layout: 'article-base.njk'
         {{ content | safe}}
 
 
+    </div>
+
+    <div class="container flow">
+        <h2 class="section-title text-center " title="Featured Articles">MORE LIKE THIS</h2>
+        <ul role="list" class="articles__list flow">
+            {%- for post in collections.post | reverse -%}
+            {% include 'article-snippet.njk'%}
+            {%- endfor %}
+        </ul>
     </div>
 </article>
