@@ -5,7 +5,6 @@ description: Our Podcast Trailer Just Launched.In This Trailer We Talk About Our
 author: Express Today
 date: 2022-05-12T04:33:26.407Z
 tags:
-  - post
   - featured
 image: /assets/blog/red-grand-opening-announcement-facebook-post.png
 imagealt: Express Today
