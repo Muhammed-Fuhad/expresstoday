@@ -1,14 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-User-agent: *
-Allow: /
-Allow: /podcast/
-Allow: https://expresstoday.info/
-Allow: https://www.expresstoday.info/
-Allow: /blog/
-Allow: /blog/5-fastest-way-to-make-money-online/
-Allow: /blog/5-awesome-tricks-to-get-unlimited-likes-and-followers-on-instagram/
-Allow: /blog/what-to-do-on-boring-sunday/
-
 Sitemap: https://expresstoday.info/sitemap.xml
