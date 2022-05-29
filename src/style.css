@@ -134,7 +134,6 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--ff-heading);
   font-weight: var(--fw-900);
   line-height: 1.1;
 }
