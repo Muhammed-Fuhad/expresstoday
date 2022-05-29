@@ -357,11 +357,11 @@ section,
 }
 .snippet__meta {
   grid-area: meta;
-  color: var(--clr-neutral-300);
+  color: #009577e1;
 }
 
 .snippet__meta span {
-  color: var(--clr-neutral-900);
+  color: #000;
 }
 
 .snippet .btn {
