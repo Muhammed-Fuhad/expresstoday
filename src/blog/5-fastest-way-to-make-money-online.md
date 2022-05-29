@@ -46,7 +46,7 @@ Creating Website Is Not Only The Way To Start Blogging, In online You Can Find F
 [YouTube](https://www.youtube.com/) Is A Popular Video Sharing Platform To Earn Money Online.</br>
 Now [Shorts](https://www.youtube.com/creators/shorts/) is Trending On [YouTube](https://www.youtube.com/) So Try Shorts On [Youtube](https://www.youtube.com/) To Get Million + Views And Make Money By Sharing Videos.</br>
 
-<div id='id-photogray'/>
+<div id='id-photography'/>
 4. Sell Your Photography
 
 If You Are A Photographer You Can Definitely Help This. </br>
