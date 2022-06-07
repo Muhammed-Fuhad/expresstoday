@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto:wght@300&display=swap');
 :root {
   --fs-300: 0.9375rem;
   --fs-400: 1.0625rem;
@@ -127,8 +128,8 @@ body {
 }
 
 ::selection {
-  color: rgb(255, 255, 255);
-  background-color: var(--clr-primary-300);
+  color: #fff;
+  background-color: var(--clr-primary-400);
 }
 
 h1,
@@ -190,8 +191,13 @@ section,
 }
 
 .article-title {
-  font-size: 1.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  color: #333;
+  font-family: 'Nanum Gothic', sans-serif;;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .section-title {
@@ -226,14 +232,14 @@ section,
     white-space: nowrap;
     font-family: sans-serif;
     font-size: 13px;
-    color: #444444;
+    color: #101010;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     transition: background-color 0.1s ease-in-out;
 }
 
 .nav__link:hover {
-    background-color: #eeeeee;
+    background-color: #eee;
 }
 
 .nav__link--active {
@@ -326,8 +332,22 @@ section,
   }
 
   .main-article p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
+
+  .main-article a{
+    color: #009578;
+    text-decoration: none;
+  }
+
+  .main-article h2{
+    font-family: 'Roboto',sans-serif;
+  }
+
+  .main-article h3{
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+
 
 /* //////////////////////
   Article snippets
@@ -353,11 +373,12 @@ section,
 }
 .snippet__title {
   grid-area: title;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppin', sans-serif;
 }
 .snippet__meta {
   grid-area: meta;
-  color: #009577e1;
+  color: #333;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .snippet__meta span {
@@ -382,6 +403,12 @@ section,
 .snippet__title a:focus {
   color: var(--clr-primary-500);
 } 
+
+
+.snippet p{
+  font-family: 'Poppins',sans-serif;
+  color: #333;
+}
 
 @media (min-width: 45em) {
   .snippet {
@@ -413,15 +440,15 @@ section,
 }
 
 .btn--primary {
-  background: var(--clr-primary-400);
+  background: var(--clr-primary-500);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-700);
-  border: 2px solid var(--clr-primary-400);
+  border: 2px solid var(--clr-primary-500);
 }
 .btn--primary:hover,
 .btn--primary:focus {
-  background: var(--clr-primary-500);
-  border-color: var(--clr-primary-500); 
+  background: var(--clr-primary-400);
+  border-color: var(--clr-primary-400); 
 }
 
 .btn--neutral {
