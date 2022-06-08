@@ -1,0 +1,129 @@
+---
+title: Blogs ( malayalam )
+---
+
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head prefix="og: http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff" />
+  <meta property="og:youtube" itemprop="youtube" content="https://www.youtube.com/channel/UCFr9NvjWXy3SpiP6Dafcnig" />
+  <meta property="og:instagram" itemprop="instagram" content="https://www.instagram.com/expresstodaypodcast/?hl=en" />
+  <meta property="og:title" itemprop="title" name="title" content="Express Today" />
+  <meta name="keywords"
+    content="tech,express,today,expresstoday,todayexpress,todayxpress,xpresstoday,technews,podcasts,blog,news,articles" />
+  <meta name="robots" content="index, follow">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="google-site-verification" content="FfYU-lCxMs6BUINR4dlaBMMKr5QR6Fyxhplhi7CWr3U" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="language" content="English" />
+  <meta itemprop="author" name="author" content="Express Today" />
+  <meta property="og:image"
+    content="https://yt3.ggpht.com/WTpLoqTF7-q_MqGCcL6z2fBzYbIOlyYS63i-5oxPIEfdC3hdXiNudJLRxZCCjRdMfyLJT-PG=s88-c-k-c0x00ffffff-no-rj" />
+  <meta itemprop="description" name="description"
+    content="What's Fresh On Express Today ? Discover Latest Blog Posts Now." />
+  <title>{{ title }}</title>
+  <link property="og:image" itemprop="image" rel="icon"
+    href="https://yt3.ggpht.com/UQ2ZokXPYkg-aPQChu3Y2yxXVL1oC2WevGxYatW5oVAWCxHBn_-lUWBn5ypvy3BZ-sQi4d0bxF0=s88-c-k-c0x00ffffff-no-rj"
+    type="image/x-icon" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="manifest" href="manifest.json">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<nav class="nav">
+  <a href="/" class="nav__link">
+    <span class="material-symbols-outlined">
+      home
+    </span>
+    <span class="nav__text">Home</span>
+  </a>
+  <a href="/blog" class="nav__link">
+    <span class="material-symbols-outlined">
+      article
+    </span>
+    <span class="nav__text">Blog</span>
+  </a>
+  <a href="/podcast" class="nav__link">
+    <span class="material-symbols-outlined">
+      podcasts
+    </span>
+    <span class="nav__text">Podcast</span>
+  </a>
+  <a href="/signin.html" class="nav__link">
+    <span class="material-symbols-outlined">
+      person
+    </span>
+    <span class="nav__text">Account</span>
+  </a>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+        <h1 class="logo">EXPRESS TODAY</h1>
+          <div class="navbar">
+            <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Malayalam
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="/blog">English</a>
+            </div>
+            </div> 
+          </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
+  </script>
+
+  <main>
+    <div class="section container" itemscope itemtype="https://schema.org/article">
+      <h1 class="section-title" title="Recent Articles">RECENT ARTICLES</h1>
+
+      <ul role="list" class="articles__list flow" itemprop="blog">
+        {%- for post in collections.post-malayalam | reverse -%}
+        {% include 'article-snippet.njk'%}
+        {%- endfor %}
+      </ul>
+    </div>
+
+    {# <li>
+      <article class="snippet">
+        <img src="/assets/blog/carbon-2021-06-11t092807.024.png" alt="a man on his computer" class="snippet__image">
+        <h3 class="snippet__title"><a href="/blog/another-article/">Another article!!</a></h3>
+        <p class="snippet__meta">by <span itemprop="author">Express Today</span> on <span>Jun 15, 2021</span></p>
+        <p class="snippet__body" itemprop="excert">This is a new article that I&#39;ll be posting</p>
+        <a href="/blog/another-article/" class="btn btn--primary">CONTINUE READING</a>
+      </article>
+    </li>#}
+
+    <script type='text/javascript'
+      src='https://platform-api.sharethis.com/js/sharethis.js#property=62660afdeb843b00192d14b7&product=inline-reaction-buttons'
+      async='async'></script>
+  </main>
+
+</body>
+
+</html>
