@@ -129,7 +129,7 @@ body {
 
 ::selection {
   color: #fff;
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-primary-300);
 }
 
 h1,
@@ -424,7 +424,7 @@ section,
 .snippet__image {
   grid-area: image;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 3;
   object-fit: cover;
   border-radius: 2%;
 }
@@ -454,16 +454,17 @@ section,
 .snippet__title a {
   color: inherit;
   text-decoration: none;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .snippet__title a:hover,
 .snippet__title a:focus {
-  color: var(--clr-primary-500);
+  color: var(--clr-primary-400);
 } 
 
 
 .snippet p{
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #333;
 }
 
@@ -484,28 +485,18 @@ section,
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  line-height: 1;
-  padding: 0.75em 1.75em;
-  border-radius: 0.25em;
+  line-height: 2;
   align-self: start;
   justify-self: start;
 }
 
-.btn:focus {
-  outline: 0.125em solid var(--clr-primary-400);
-  outline-offset: 0.25em;
-}
-
 .btn--primary {
-  background: var(--clr-primary-500);
-  color: var(--clr-neutral-100);
+  color: var(--clr-primary-300);
   font-weight: var(--fw-700);
-  border: 2px solid var(--clr-primary-500);
 }
 .btn--primary:hover,
 .btn--primary:focus {
-  background: var(--clr-primary-400);
-  border-color: var(--clr-primary-400); 
+  color: rgba(37, 201, 171, 0.664);
 }
 
 .btn--neutral {
@@ -530,8 +521,11 @@ section,
 
 @media (max-width: 475px) {
   .page-header__content h1{
-    font-size: 17px;
-    margin-top: 4px;
+    font-size: 15px;
+    margin-top: 6px;
+  }
+  .dropdown .dropbtn{
+    font-size: 13px;
   }
 }
 

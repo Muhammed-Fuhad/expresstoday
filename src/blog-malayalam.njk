@@ -103,7 +103,7 @@ title: Blogs ( malayalam )
       <h1 class="section-title" title="Recent Articles">RECENT ARTICLES</h1>
 
       <ul role="list" class="articles__list flow" itemprop="blog">
-        {%- for post in collections.post-malayalam | reverse -%}
+        {%- for post in collections.malayalam | reverse -%}
         {% include 'article-snippet.njk'%}
         {%- endfor %}
       </ul>
