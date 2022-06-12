@@ -1,5 +1,5 @@
 ---
-title: how to read blogs in malayalam
+title: എക്സ്പ്രസ്സ്‌ റ്റുടെയുടെ ബ്ലോഗ്സ് മലയാള ഭാഷയിൽ വായിക്കാൻ ഇങ്ങനെ ചെയ്യൂ
 description: എങ്ങനെ മലയത്തിൽ ബ്ലോഗ്സ് വായിക്കാം ?
 author: Express Today
 date: 2022-06-12T06:09:04.346Z
