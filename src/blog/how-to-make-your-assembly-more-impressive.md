@@ -59,14 +59,14 @@ Be Confident.</br>
 </div>
 </br>
 
-Select Each Student/Members For Your Assembly To Conduct Programs.</br> By Changing Each Students/Members For Assembly Will Reduce The Boredom Of Audience.</br>
+Select Each Student/Members For Your Assembly To Conduct Programs.</br> By Changing Each Students/Members For Assembly, It Will Reduce The Boredom Of Audience.</br>
 
  <div id='id-conclusion'>
 5. Conclusion
 </div>
 </br>
 
-Conclusion Is The Last Process Of The Assembly. So Keep It Short And Calm To Say.</br> 
+Conclusion Is The Last Part Of The Assembly. So Keep It Short And Calm To Say.</br> 
 
 You Can Conclude Your Assembly Like This :- </br>
 
