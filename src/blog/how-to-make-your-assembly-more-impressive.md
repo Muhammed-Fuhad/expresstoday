@@ -9,7 +9,7 @@ tags:
 image: /assets/blog/how-to-conduct-assembly.jpg
 imagealt: Express Today
 ---
-Everyone Of You Have A Question "How To Conduct A Impressive Assembly". So We Are Here With A Wonderful Solution. So Read Till The End To Make Your Assembly Assembly More Impressive Than Ever.
+Everyone Of You Have A Question "How To Conduct An Impressive Assembly". So We Are Here With A Wonderful Solution. So Read Till The End To Make Your Assembly More Impressive Than Ever.
 
 ### Table Of Content
 
